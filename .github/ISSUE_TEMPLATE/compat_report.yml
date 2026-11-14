@@ -1,0 +1,70 @@
+name: Compatibility report (after a game, RLS or BeamNG.Earth update)
+description: Something that worked before an update stopped working after it.
+title: "[compat] "
+labels: ["compatibility"]
+body:
+  - type: markdown
+    attributes:
+      value: >-
+        JAMMER is checked against each BeamNG.drive, RLS and BeamNG.Earth update. If an
+        update broke it before that check landed, this is the quickest way to tell me —
+        please say what each version was **before** and **after**, since knowing which one
+        moved is most of the diagnosis.
+  - type: input
+    id: what-updated
+    attributes:
+      label: What did you update?
+      placeholder: "BeamNG.Earth dev.416 to dev.417"
+    validations:
+      required: true
+  - type: input
+    id: game-version
+    attributes:
+      label: BeamNG.drive version
+      placeholder: "0.40.5"
+    validations:
+      required: true
+  - type: input
+    id: earth-version
+    attributes:
+      label: BeamNG.Earth version, if you run it
+      description: The dev number, e.g. dev.417. Put "not installed" if you do not run it.
+    validations:
+      required: true
+  - type: input
+    id: jammer-version
+    attributes:
+      label: JAMMER version
+      placeholder: "0.3.3"
+    validations:
+      required: true
+  - type: input
+    id: career-mod
+    attributes:
+      label: Career overhaul mod and version, if any
+      description: 'RLS and its version, or "none".'
+    validations:
+      required: true
+  - type: textarea
+    id: before-after
+    attributes:
+      label: What worked before, and what happens now?
+    validations:
+      required: true
+  - type: textarea
+    id: log
+    attributes:
+      label: Log
+      description: >-
+        Attach beamng.log if you can. Note that it truncates itself a short way into a
+        session, so a missing line does not prove anything — say what you saw on screen too.
+    validations:
+      required: false
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Quick checks
+      options:
+        - label: I did not unzip the mod
+        - label: I deleted any older JAMMER zip from my mods folder
+        - label: The game was closed when I copied the zip in

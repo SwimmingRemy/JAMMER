@@ -1,0 +1,17 @@
+# Build output
+*.zip
+!ref/**/*.zip
+build/
+dist/
+
+# Working files that are not part of the release
+scratch/
+*.bak
+*.orig
+*.tmp
+*.log
+
+# OS noise
+.DS_Store
+Thumbs.db
+desktop.ini

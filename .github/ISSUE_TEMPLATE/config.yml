@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Install problems — read this first
+    url: https://github.com/SwimmingRemy/JAMMER#install
+    about: >-
+      Most reports turn out to be one of three things: the zip was unzipped, an older
+      JAMMER zip is still in the mods folder, or the game was open when the file was
+      copied in. The Install section covers all three.
+  - name: Compatibility after a game, RLS or BeamNG.Earth update
+    url: https://github.com/SwimmingRemy/JAMMER/issues/new?template=compat_report.yml
+    about: Use the compatibility report instead of a bug report.

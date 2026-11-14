@@ -1,0 +1,86 @@
+name: Bug report
+description: Something went wrong with JAMMER
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting. The three version numbers below are what make a report
+        reproducible — please fill them in even if the bug seems unrelated to them.
+
+        **Before you file:** if your camera score is stuck at zero and you are not driving
+        in France, that is expected. BeamNG.Earth's camera catalogue only covers France and
+        its overseas départements. See the README.
+
+  - type: input
+    id: game-version
+    attributes:
+      label: BeamNG.drive version
+      placeholder: "0.40.5"
+    validations:
+      required: true
+
+  - type: input
+    id: earth-version
+    attributes:
+      label: BeamNG.Earth version
+      description: The dev number, or "not installed".
+      placeholder: "dev.406, or not installed"
+    validations:
+      required: true
+
+  - type: input
+    id: jammer-version
+    attributes:
+      label: JAMMER version
+      placeholder: "v0.3.3"
+    validations:
+      required: true
+
+  - type: input
+    id: map
+    attributes:
+      label: Which map were you on?
+      placeholder: "BeamNG.Earth near Paris / West Coast USA / ..."
+    validations:
+      required: true
+
+  - type: dropdown
+    id: career
+    attributes:
+      label: Were you running a career overhaul mod?
+      description: JAMMER does not use one, but it helps to rule out.
+      options:
+        - "No career mod"
+        - "RLS Career Overhaul"
+        - "Something else"
+    validations:
+      required: true
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: What you did, what you expected, what you got instead.
+    validations:
+      required: true
+
+  - type: textarea
+    id: log
+    attributes:
+      label: Log
+      description: >
+        Paste the lines mentioning JAMMER from beamng.log, or attach the file.
+        It is in %LOCALAPPDATA%\BeamNG\BeamNG.drive\current\beamng.log
+      render: text
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Quick checks
+      options:
+        - label: I did not unzip the mod
+        - label: I deleted any older JAMMER zip from my mods folder
+        - label: The game was closed when I copied the zip in
